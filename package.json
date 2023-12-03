@@ -15,6 +15,9 @@
     "url": "https://github.com/yodagg/oss-upload-cli/issues",
     "email": "zc@wo2.me"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "oss-upload-cli": "./bin/oss-upload-cli.js"
   },
