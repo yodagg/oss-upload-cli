@@ -1,0 +1,31 @@
+{
+  "name": "@yodagg/oss-upload-cli",
+  "version": "1.0.0",
+  "description": "通过命令行上传文件到阿里云oss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yodagg/oss-upload-cli.git"
+  },
+  "keywords": [
+    "oss",
+    "upload",
+    "aliyun"
+  ],
+  "bugs": {
+    "url": "https://github.com/yodagg/oss-upload-cli/issues",
+    "email": "zc@wo2.me"
+  },
+  "bin": {
+    "oss-upload-cli": "./bin/oss-upload-cli.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "yodagg",
+  "license": "MIT",
+  "dependencies": {
+    "ali-oss": "^6.18.1",
+    "commander": "^11.1.0"
+  }
+}
