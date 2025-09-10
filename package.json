@@ -1,6 +1,6 @@
 {
   "name": "@yodagg/oss-upload-cli",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "通过命令行上传文件到阿里云oss",
   "repository": {
     "type": "git",
