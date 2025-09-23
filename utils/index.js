@@ -10,7 +10,8 @@ const readDirectory = (dir) => {
 }
 
 const getRelativePath = (dir, file) => {
-  return path.join(dir, file)
+  // 使用 posix 路径确保在所有平台上都使用正斜线
+  return path.posix.join(dir, file)
 }
 
 /**
@@ -34,7 +35,8 @@ export const getAllFilePaths = (sourcePath, relativePath = '') => {
   } else {
     // 处理单个文件的情况
     const fileName = path.basename(sourcePath)
-    filePaths.push(relativePath || fileName)
+    // 确保单个文件的相对路径也使用正斜线
+    filePaths.push(relativePath ? path.posix.join(relativePath, fileName) : fileName)
   }
   
   return filePaths

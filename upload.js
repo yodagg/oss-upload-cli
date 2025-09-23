@@ -171,8 +171,10 @@ export default async (args) => {
         if (!fs.statSync(args.source).isDirectory()) {
             return path.basename(f.path)
         }
-        // 如果 source 是目录，返回相对路径
-        return path.relative(args.source, f.path)
+        // 如果 source 是目录，返回相对路径并转换为posix格式
+        const relativePath = path.relative(args.source, f.path)
+        // 将Windows反斜线转换为正斜线
+        return relativePath.replace(/\\/g, '/')
     })
     console.log(chalk.green(`文件检查完成: ${validFiles.length} 个文件有效，总大小: ${validation.summary.totalSizeMB}MB`))
 
